@@ -1,11 +1,11 @@
 export default function decorate(block) {
-  const allLinks = [...block.querySelectorAll('a')];
+  const rows = [...block.querySelectorAll(':scope > div')];
+  const firstRow = rows[0];
+  const allLinks = firstRow ? [...firstRow.querySelectorAll('a')] : [];
   const videoLink = allLinks.find((a) => a.href.match(/\.mp4/i));
 
   if (videoLink) {
     const videoSrc = videoLink.href;
-    const videoContainer = videoLink.closest('div');
-
     const video = document.createElement('video');
     video.setAttribute('autoplay', '');
     video.setAttribute('muted', '');
@@ -18,25 +18,23 @@ export default function decorate(block) {
     source.type = 'video/mp4';
     video.append(source);
 
-    video.addEventListener('error', () => {
-      video.style.display = 'none';
-    });
-
     video.addEventListener('loadeddata', () => {
       video.play().catch(() => {});
     });
 
-    if (videoContainer) {
-      videoContainer.replaceWith(video);
-    } else {
-      videoLink.replaceWith(video);
-    }
+    firstRow.replaceWith(video);
+  } else {
+    if (firstRow) firstRow.remove();
+    block.classList.add('no-image');
   }
 
-  const ctaLink = block.querySelector('a[href]:not([href*=".mp4"])');
-  if (ctaLink && !ctaLink.classList.contains('button')) {
-    ctaLink.classList.add('button', 'primary');
-    const wrapper = ctaLink.closest('p');
-    if (wrapper) wrapper.classList.add('button-wrapper');
+  const contentRow = block.querySelector(':scope > div');
+  if (contentRow) {
+    const ctaLink = contentRow.querySelector('a[href]:not([href*=".mp4"])');
+    if (ctaLink && !ctaLink.classList.contains('button')) {
+      ctaLink.classList.add('button', 'primary');
+      const wrapper = ctaLink.closest('p');
+      if (wrapper) wrapper.classList.add('button-wrapper');
+    }
   }
 }

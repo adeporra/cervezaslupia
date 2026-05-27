@@ -14,6 +14,7 @@
   min-height: 80vh;
   overflow: hidden;
   padding: 40px 24px;
+  background-color: var(--dark-color);
 }
 
 /* Fallback when no video/image */
