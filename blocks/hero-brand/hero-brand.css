@@ -9,7 +9,7 @@
 /* Block root */
 .hero-brand {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   padding: 130px 60px 40px;
   margin: 0 auto;
   color: var(--text-color);
@@ -19,8 +19,7 @@
 .hero-brand > div:first-child {
   position: absolute;
   top: -30px;
-  left: 50%;
-  transform: translateX(-20%);
+  left: 0;
   width: 300px;
   z-index: 0;
   pointer-events: none;
@@ -170,11 +169,11 @@
     line-height: 63px;
   }
 
-  /* Cell 2: Hop leaf - bigger, with left margin */
+  /* Cell 2: Hop leaf - reaches top-left */
   .hero-brand > div:nth-child(2) > div:nth-child(2) {
     position: absolute;
-    top: -40px;
-    left: 20px;
+    top: -80px;
+    left: -60px;
     width: 200px;
   }
 
