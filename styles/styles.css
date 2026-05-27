@@ -262,6 +262,14 @@ main > .section > div {
   padding: 0 24px;
 }
 
+main > .section > .hero-brand-wrapper,
+main > .section > .carousel-product-wrapper,
+main > .section > .hero-video-wrapper,
+main > .section > .embed-video-wrapper {
+  max-width: 100%;
+  padding: 0;
+}
+
 main > .section:first-of-type {
   margin-top: 0;
 }

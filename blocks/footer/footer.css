@@ -7,8 +7,8 @@ footer {
 
 footer .footer > div {
   margin: auto;
-  max-width: 1400px;
-  padding: 40px 24px 24px;
+  max-width: 100%;
+  padding: 0;
 }
 
 footer .footer p {
@@ -107,29 +107,28 @@ footer .footer-brands {
   padding: 40px 0;
   border-top: 1px solid rgb(255 255 255 / 15%);
   border-bottom: none;
+  overflow-x: auto;
 }
 
 footer .footer-brands p {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px 30px;
+  flex-wrap: nowrap;
+  gap: 24px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  min-width: max-content;
 }
 
 footer .footer-brands a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
-  width: 80px;
+  flex-shrink: 0;
 }
 
 footer .footer-brands img {
-  max-height: 40px;
-  max-width: 70px;
+  height: 35px;
   width: auto;
-  height: auto;
   opacity: 0.6;
   transition: opacity 0.2s ease;
 }
@@ -208,16 +207,9 @@ footer .footer-legal ul li a:any-link {
     justify-content: flex-end;
   }
 
-  /* Brands: horizontal row */
+  /* Brands: evenly spaced */
   footer .footer-brands p {
-    flex-wrap: nowrap;
     justify-content: space-between;
-    gap: 10px;
-  }
-
-  footer .footer-brands a {
-    width: auto;
-    flex: 1;
   }
 
   /* Legal: row with text-left, links-right */
