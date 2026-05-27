@@ -3,6 +3,8 @@ header .nav-wrapper {
   z-index: 10;
   position: fixed;
   top: 0;
+  background-color: rgb(255 255 255 / 85%);
+  backdrop-filter: blur(10px);
 }
 
 header nav {
@@ -12,8 +14,8 @@ header nav {
   justify-content: space-between;
   max-width: 1440px;
   margin: auto;
-  height: var(--nav-height);
-  padding: 15px 30px;
+  height: 70px;
+  padding: 10px 30px;
   font-family: var(--body-font-family);
   font-size: 15px;
 }
@@ -34,8 +36,8 @@ header .nav-brand {
 }
 
 header nav .nav-brand img {
-  width: 140px;
-  height: auto;
+  width: auto;
+  height: 47px;
 }
 
 /* sections (nav links) */
@@ -152,20 +154,20 @@ header nav[aria-expanded='true'] {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding-top: var(--nav-height);
+  padding-top: 70px;
   background-color: var(--background-color);
   overflow-y: auto;
 }
 
 header nav[aria-expanded='true'] .nav-brand {
   position: absolute;
-  top: 15px;
+  top: 12px;
   left: 30px;
 }
 
 header nav[aria-expanded='true'] .nav-hamburger {
   position: absolute;
-  top: 40px;
+  top: 20px;
   right: 30px;
 }
 
