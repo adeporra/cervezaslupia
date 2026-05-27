@@ -66,16 +66,17 @@
   font-style: normal;
 }
 
-/* Black box with white text ("plant more hops.") */
+/* Black box with white text ("plant more hops.") - slightly rotated */
 .hero-brand > div:nth-child(2) > div:first-child p del,
 .hero-brand > div:nth-child(2) > div:first-child p s {
   display: inline-block;
-  padding: 10px 15px;
+  padding: 10px 20px;
   background-color: rgb(0 0 0);
   color: rgb(255 255 255);
   text-decoration: none;
   font-style: normal;
   line-height: 45px;
+  transform: rotate(-2deg);
 }
 
 /* Cell 2: Hop leaf (Hoja) decorative image */
