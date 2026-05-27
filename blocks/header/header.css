@@ -174,40 +174,7 @@ header nav[aria-expanded='true'] .nav-sections ul > li > a:hover {
 }
 
 @media (width >= 900px) {
-  header nav .nav-sections {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-  }
-
-  header nav .nav-sections ul {
-    display: flex;
-    gap: 32px;
-    align-items: center;
-  }
-
-  header nav .nav-sections ul > li {
-    padding: 0;
-  }
-
-  header nav .nav-sections ul > li > a {
-    font-size: 15px;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  header nav .nav-sections ul > li > a:hover {
-    color: var(--link-color);
-  }
-
-  header nav .nav-tools {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
   header nav .nav-hamburger {
-    display: none;
+    display: flex;
   }
 }
