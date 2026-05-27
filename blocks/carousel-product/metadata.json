@@ -1,0 +1,39 @@
+{
+  "variantName": "carousel-product",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-05-27T18:03:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://cervezaslupia.es/",
+    "originPage": "homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "product-showcase",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "background image + heading + 2 CTAs + product image",
+    "buttonCount": 2,
+    "imageCount": 2
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product showcase carousels",
+      "featured product rotations",
+      "brand product highlights with backgrounds"
+    ],
+    "notSuitableFor": [
+      "simple image galleries",
+      "text-heavy slideshows",
+      "blog post carousels"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-27T18:03:00.000Z"
+  }
+}

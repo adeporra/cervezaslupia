@@ -1,0 +1,39 @@
+{
+  "variantName": "hero-video",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-05-27T18:03:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://cervezaslupia.es/",
+    "originPage": "homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "video-hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "heading + descriptive text + CTA",
+    "buttonCount": 1,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "sections with video/dark backgrounds",
+      "harvest/nature themed sections",
+      "atmospheric hero areas mid-page"
+    ],
+    "notSuitableFor": [
+      "light background heroes",
+      "heroes with multiple product images",
+      "text-only hero sections"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-27T18:03:00.000Z"
+  }
+}

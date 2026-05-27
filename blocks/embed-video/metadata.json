@@ -1,0 +1,39 @@
+{
+  "variantName": "embed-video",
+  "baseBlock": "embed",
+  "version": "1.0.0",
+  "created": "2026-05-27T18:03:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://cervezaslupia.es/",
+    "originPage": "homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "video-embed",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "video URL + poster thumbnail",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "YouTube video embeds",
+      "promotional video sections",
+      "documentary/brand video placements"
+    ],
+    "notSuitableFor": [
+      "social media embeds",
+      "inline video within text content",
+      "video galleries"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-27T18:03:00.000Z"
+  }
+}

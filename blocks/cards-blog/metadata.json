@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-blog",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-27T18:03:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://cervezaslupia.es/",
+    "originPage": "homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "blog-posts",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading (linked)",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "blog post listings",
+      "article card grids",
+      "news/updates sections with thumbnails"
+    ],
+    "notSuitableFor": [
+      "product cards with pricing",
+      "feature cards with icons",
+      "team member cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-27T18:03:00.000Z"
+  }
+}

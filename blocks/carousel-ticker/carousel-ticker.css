@@ -1,0 +1,47 @@
+/* Block: carousel-ticker -- infinite horizontal scrolling marquee */
+
+/* Full-width override for the wrapper */
+.carousel-ticker-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.carousel-ticker {
+  overflow: hidden;
+  padding: 30px 0 50px;
+  margin: 0;
+}
+
+.carousel-ticker .carousel-ticker-track {
+  display: flex;
+  flex-flow: row nowrap;
+  animation: carousel-ticker-scroll 10s linear infinite;
+}
+
+.carousel-ticker .carousel-ticker-item {
+  flex-shrink: 0;
+  padding: 0 20px;
+}
+
+.carousel-ticker .carousel-ticker-item picture {
+  display: block;
+  line-height: 0;
+}
+
+.carousel-ticker .carousel-ticker-item img {
+  display: block;
+  height: 65px;
+  width: auto;
+  max-width: none;
+  object-fit: fill;
+}
+
+@keyframes carousel-ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}

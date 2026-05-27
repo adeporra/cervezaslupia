@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://cervezaslupia.es/",
+  "path": "index",
+  "timestamp": "2026-05-27T18:21:58.851Z",
+  "title": "Lupia - Beers made with hops from Galicia",
+  "template": "homepage",
+  "blocks": [
+    "hero-brand",
+    "carousel-ticker",
+    "embed-video",
+    "carousel-product",
+    "hero-video"
+  ]
+}

@@ -1,0 +1,211 @@
+/* Block: hero-brand -- Homepage hero with tagline and decorative images */
+
+/* Full-width wrapper override */
+.hero-brand-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+/* Block root */
+.hero-brand {
+  position: relative;
+  overflow: hidden;
+  padding: 130px 30px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  color: var(--text-color);
+}
+
+/* Row 1: Large hop illustration image (Nugget) - positioned absolutely */
+.hero-brand > div:first-child {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-20%);
+  width: 300px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-brand > div:first-child img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Row 2: Content row with tagline + decorative images + cans */
+.hero-brand > div:nth-child(2) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Cell 1: Tagline text */
+.hero-brand > div:nth-child(2) > div:first-child {
+  flex: 1 1 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-brand > div:nth-child(2) > div:first-child p {
+  font-family: var(--heading-font-family);
+  font-size: 45px;
+  font-weight: 800;
+  line-height: 45px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  color: var(--text-color);
+  margin: 0;
+}
+
+/* Green highlight text ("We don't") */
+.hero-brand > div:nth-child(2) > div:first-child p em {
+  color: rgb(169 225 62);
+  font-style: normal;
+}
+
+/* Black box with white text ("plant more hops.") */
+.hero-brand > div:nth-child(2) > div:first-child p del {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: rgb(0 0 0);
+  color: rgb(255 255 255);
+  text-decoration: none;
+  font-style: normal;
+  line-height: 45px;
+}
+
+/* Cell 2: Hop leaf (Hoja) decorative image */
+.hero-brand > div:nth-child(2) > div:nth-child(2) {
+  position: absolute;
+  top: -60px;
+  left: -30px;
+  width: 100px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-brand > div:nth-child(2) > div:nth-child(2) img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Cell 3: Lupulitos/hearts decorative image */
+.hero-brand > div:nth-child(2) > div:nth-child(3) {
+  flex: 0 0 auto;
+  width: 150px;
+  pointer-events: none;
+}
+
+.hero-brand > div:nth-child(2) > div:nth-child(3) img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Cell 4: Lobo/wolf decorative image */
+.hero-brand > div:nth-child(2) > div:nth-child(4) {
+  flex: 0 0 auto;
+  width: 150px;
+  pointer-events: none;
+}
+
+.hero-brand > div:nth-child(2) > div:nth-child(4) img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Cell 5: Product cans image */
+.hero-brand > div:nth-child(2) > div:nth-child(5) {
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+.hero-brand > div:nth-child(2) > div:nth-child(5) img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Desktop layout */
+@media (width >= 900px) {
+  .hero-brand {
+    padding: 130px 30px 40px;
+    min-height: 700px;
+  }
+
+  /* Row 1: Nugget hop image - larger and positioned top center */
+  .hero-brand > div:first-child {
+    top: -180px;
+    left: 30%;
+    transform: none;
+    width: 426px;
+  }
+
+  /* Row 2: side-by-side layout */
+  .hero-brand > div:nth-child(2) {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
+
+  /* Cell 1: Tagline - takes left half */
+  .hero-brand > div:nth-child(2) > div:first-child {
+    flex: 1 1 0;
+  }
+
+  .hero-brand > div:nth-child(2) > div:first-child p {
+    font-size: 63px;
+    line-height: 63px;
+  }
+
+  .hero-brand > div:nth-child(2) > div:first-child p del {
+    line-height: 63px;
+  }
+
+  /* Cell 2: Hop leaf - positioned absolute off to the left */
+  .hero-brand > div:nth-child(2) > div:nth-child(2) {
+    position: absolute;
+    top: -80px;
+    left: -60px;
+    width: 139px;
+  }
+
+  /* Cell 3: Lupulitos decorative */
+  .hero-brand > div:nth-child(2) > div:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 180px;
+    max-width: 180px;
+    z-index: 0;
+    flex: none;
+  }
+
+  /* Cell 4: Lobo decorative */
+  .hero-brand > div:nth-child(2) > div:nth-child(4) {
+    position: absolute;
+    bottom: 60px;
+    left: 200px;
+    width: 180px;
+    max-width: 180px;
+    z-index: 0;
+    flex: none;
+  }
+
+  /* Cell 5: Product cans - takes right half */
+  .hero-brand > div:nth-child(2) > div:nth-child(5) {
+    flex: 1 1 0;
+    text-align: center;
+    align-self: flex-start;
+  }
+
+  .hero-brand > div:nth-child(2) > div:nth-child(5) img {
+    max-width: 100%;
+    width: 100%;
+  }
+}

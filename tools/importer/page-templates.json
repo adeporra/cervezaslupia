@@ -1,0 +1,137 @@
+{
+  "metadata": {
+    "projectType": "doc"
+  },
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://cervezaslupia.es/"
+      ],
+      "description": "Craft beer brand homepage with hero, product showcase, and brand story",
+      "blocks": [
+        {
+          "name": "hero-brand",
+          "instances": [
+            ".bloque_hero_home"
+          ]
+        },
+        {
+          "name": "carousel-ticker",
+          "instances": [
+            ".marquesina_wrap"
+          ]
+        },
+        {
+          "name": "embed-video",
+          "instances": [
+            ".video-container"
+          ]
+        },
+        {
+          "name": "carousel-product",
+          "instances": [
+            ".Carrusel_navigation_wrapper__x8lu_"
+          ]
+        },
+        {
+          "name": "hero-video",
+          "instances": [
+            ".cosecha_home_video"
+          ]
+        },
+        {
+          "name": "cards-blog",
+          "instances": [
+            ".CarruselEntradas_navigation_wrapper__pztDh"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero",
+          "selector": ".bloque_hero_home",
+          "style": null,
+          "blocks": [
+            "hero-brand"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Marquee Ticker",
+          "selector": ".marquesina_wrap",
+          "style": null,
+          "blocks": [
+            "carousel-ticker"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3",
+          "name": "Video Embed",
+          "selector": ".video-container",
+          "style": null,
+          "blocks": [
+            "embed-video"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "Full-width Image",
+          "selector": ".wrapper_img_100",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".wrapper_img_100 figure"
+          ]
+        },
+        {
+          "id": "section-5",
+          "name": "Product Carousel",
+          "selector": ".Carrusel_navigation_wrapper__x8lu_",
+          "style": null,
+          "blocks": [
+            "carousel-product"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-6",
+          "name": "La Cosecha Video",
+          "selector": ".cosecha_home_video",
+          "style": null,
+          "blocks": [
+            "hero-video"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-7",
+          "name": "Blog Posts",
+          "selector": ".entradas_wrap",
+          "style": null,
+          "blocks": [
+            "cards-blog"
+          ],
+          "defaultContent": [
+            ".entradas_wrap h2.titulo_big"
+          ]
+        },
+        {
+          "id": "section-8",
+          "name": "Newsletter Signup",
+          "selector": ".homenews",
+          "style": "dark",
+          "blocks": [],
+          "defaultContent": [
+            ".homenews img",
+            ".homenews .Newsletter_oveja__8I2_7"
+          ]
+        }
+      ]
+    }
+  ]
+}

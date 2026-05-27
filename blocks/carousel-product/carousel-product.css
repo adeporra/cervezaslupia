@@ -1,0 +1,246 @@
+/* carousel-product block — full-width product carousel */
+
+/* Full-width wrapper override */
+.carousel-product-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+/* Block root */
+.carousel-product {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Slides container */
+.carousel-product .carousel-product-slides-container {
+  position: relative;
+}
+
+.carousel-product .carousel-product-slides,
+.carousel-product .carousel-product-slide-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-product .carousel-product-slides {
+  display: flex;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  overflow: scroll clip;
+}
+
+.carousel-product .carousel-product-slides::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual slide */
+.carousel-product .carousel-product-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  background-color: var(--dark-color);
+}
+
+/* Background image — covers the entire slide */
+.carousel-product .carousel-product-slide .carousel-product-slide-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.carousel-product .carousel-product-slide .carousel-product-slide-image picture {
+  position: absolute;
+  inset: 0;
+}
+
+.carousel-product .carousel-product-slide .carousel-product-slide-image picture > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Content overlay */
+.carousel-product .carousel-product-slide .carousel-product-slide-content {
+  z-index: 1;
+  position: relative;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+/* Heading — large uppercase pink text */
+.carousel-product .carousel-product-slide-content h2 {
+  font-size: clamp(60px, 17vw, 250px);
+  font-weight: 400;
+  font-family: var(--heading-font-family);
+  line-height: 0.76;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  color: var(--link-color);
+  margin: 0 0 16px;
+}
+
+/* CTA links — styled as buttons inline */
+.carousel-product .carousel-product-slide-content p {
+  margin: 8px 0;
+}
+
+/* First link = primary CTA (pink fill) */
+.carousel-product .carousel-product-slide-content p:nth-of-type(1) a:any-link {
+  display: inline-block;
+  background-color: var(--link-color);
+  color: #fff;
+  padding: 13px 40px;
+  border: 1px solid var(--link-color);
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: var(--body-font-family);
+  text-decoration: none;
+  text-transform: none;
+}
+
+.carousel-product .carousel-product-slide-content p:nth-of-type(1) a:any-link:hover {
+  background-color: var(--link-hover-color);
+  border-color: var(--link-hover-color);
+}
+
+/* Second link = outline CTA (white outline) */
+/* stylelint-disable-next-line no-descending-specificity */
+.carousel-product .carousel-product-slide-content p:nth-of-type(2) a:any-link {
+  display: inline-block;
+  background-color: transparent;
+  color: #fff;
+  padding: 13px 40px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: var(--body-font-family);
+  text-decoration: none;
+  text-transform: none;
+}
+
+.carousel-product .carousel-product-slide-content p:nth-of-type(2) a:any-link:hover {
+  background-color: rgb(255 255 255 / 15%);
+  border-color: #fff;
+}
+
+/* Slide indicators (dots) — positioned at bottom of carousel */
+.carousel-product .carousel-product-slide-indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+}
+
+.carousel-product .carousel-product-slide-indicator button {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid var(--text-color);
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.carousel-product .carousel-product-slide-indicator button:disabled,
+.carousel-product .carousel-product-slide-indicator button:hover,
+.carousel-product .carousel-product-slide-indicator button:focus-visible {
+  background-color: var(--text-color);
+}
+
+/* Navigation arrows */
+.carousel-product .carousel-product-navigation-buttons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.carousel-product .carousel-product-navigation-buttons button {
+  position: relative;
+  width: 58px;
+  height: 58px;
+  margin: 0;
+  border-radius: 50%;
+  padding: 0;
+  border: none;
+  background-color: rgb(0 0 0 / 30%);
+  cursor: pointer;
+  transition: background-color 0.2s;
+  pointer-events: auto;
+}
+
+.carousel-product .carousel-product-navigation-buttons button:hover,
+.carousel-product .carousel-product-navigation-buttons button:focus-visible {
+  background-color: rgb(0 0 0 / 60%);
+}
+
+/* Arrow chevron indicators */
+.carousel-product .carousel-product-navigation-buttons button::after {
+  display: block;
+  content: '';
+  border: 3px solid #fff;
+  border-bottom: 0;
+  border-left: 0;
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 3px);
+  transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+.carousel-product .carousel-product-navigation-buttons button.slide-next::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+  left: calc(50% - 3px);
+}
+
+/* Desktop (900px+) */
+@media (width >= 900px) {
+  .carousel-product .carousel-product-slide {
+    min-height: 600px;
+  }
+
+  .carousel-product .carousel-product-slide .carousel-product-slide-content {
+    padding: 60px 80px;
+  }
+
+  .carousel-product .carousel-product-navigation-buttons {
+    left: 32px;
+    right: 32px;
+  }
+}
+
+/* Large desktop (1200px+) */
+@media (width >= 1200px) {
+  .carousel-product .carousel-product-slide {
+    min-height: 830px;
+  }
+
+  .carousel-product .carousel-product-slide .carousel-product-slide-content {
+    padding: 80px 120px;
+  }
+}

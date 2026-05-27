@@ -1,0 +1,39 @@
+{
+  "variantName": "hero-brand",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-05-27T18:03:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://cervezaslupia.es/",
+    "originPage": "homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "brand-hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "tagline + decorative images + product image",
+    "buttonCount": 0,
+    "imageCount": 5
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "homepage hero sections",
+      "brand landing pages",
+      "pages with decorative imagery and taglines"
+    ],
+    "notSuitableFor": [
+      "simple text-only heroes",
+      "product detail pages",
+      "pages with single CTA focus"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-27T18:03:00.000Z"
+  }
+}

@@ -1,0 +1,128 @@
+/* hero-video: full-width video background with text overlay */
+
+/* Full-width wrapper override */
+.hero-video-container .hero-video-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-video {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 80vh;
+  overflow: hidden;
+  padding: 40px 24px;
+}
+
+/* Fallback when no video/image */
+.hero-video.no-image {
+  background-color: var(--dark-color);
+}
+
+/* Video background */
+.hero-video > video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Content overlay row */
+.hero-video > div {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 24px;
+  width: 100%;
+}
+
+/* Heading cell */
+.hero-video > div > div:first-child h2 {
+  font-size: 48px;
+  font-weight: 500;
+  font-family: var(--heading-font-family);
+  line-height: 1;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  color: rgb(255 255 255);
+  margin: 0 0 0.5em;
+}
+
+/* Text cell */
+.hero-video > div > div:nth-child(2) p {
+  font-size: 24px;
+  font-family: var(--body-font-family);
+  line-height: 1.25;
+  color: rgb(255 255 255);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* CTA cell */
+.hero-video > div > div:last-child {
+  margin-top: 1.5em;
+}
+
+.hero-video > div > div:last-child a:any-link,
+.hero-video a.button:any-link {
+  background-color: var(--link-color);
+  color: rgb(255 255 255);
+  padding: 12px 50px;
+  border: 1px solid var(--link-color);
+  border-radius: 0;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: var(--body-font-family);
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.hero-video > div > div:last-child a:hover,
+.hero-video a.button:hover {
+  background-color: var(--link-hover-color);
+  border-color: var(--link-hover-color);
+  color: rgb(255 255 255);
+}
+
+/* No-image fallback text color */
+.hero-video.no-image > div > div:first-child h2,
+.hero-video.no-image > div > div:nth-child(2) p,
+.hero-video.no-image > div > div:last-child a:any-link {
+  color: rgb(255 255 255);
+}
+
+/* Desktop layout */
+@media (width >= 900px) {
+  .hero-video {
+    min-height: 840px;
+    padding: 60px 80px;
+  }
+
+  .hero-video > div {
+    width: auto;
+    max-width: 450px;
+    padding: 0;
+  }
+
+  .hero-video > div > div:first-child h2 {
+    font-size: 70px;
+    line-height: 70px;
+  }
+
+  .hero-video > div > div:nth-child(2) p {
+    font-size: 34px;
+    line-height: 42.5px;
+  }
+
+  .hero-video > div > div:last-child a:any-link,
+  .hero-video a.button:any-link {
+    font-size: 28px;
+  }
+}
