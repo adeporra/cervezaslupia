@@ -6,11 +6,11 @@ export default function decorate(block) {
   if (videoLink && videoLink.href.endsWith('.mp4')) {
     const video = document.createElement('video');
     video.src = videoLink.href;
-    video.autoplay = true;
-    video.muted = true;
-    video.loop = true;
-    video.playsInline = true;
+    video.setAttribute('autoplay', '');
+    video.setAttribute('muted', '');
+    video.setAttribute('loop', '');
     video.setAttribute('playsinline', '');
+    video.muted = true;
     videoRow.replaceWith(video);
   } else if (!block.querySelector(':scope > div:first-child picture')) {
     block.classList.add('no-image');
