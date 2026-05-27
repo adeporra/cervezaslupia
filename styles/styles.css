@@ -49,6 +49,10 @@ body {
   display: none;
   margin: 0;
   background-color: var(--background-color);
+  background-image: url('/content/images/bg-texture.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
@@ -119,6 +123,10 @@ pre {
 
 main > div {
   margin: 0 16px;
+}
+
+main .section-metadata-wrapper {
+  display: none;
 }
 
 input,
@@ -234,6 +242,11 @@ main img {
 .icon img {
   height: 100%;
   width: 100%;
+}
+
+main > .section > .default-content-wrapper img {
+  width: 100%;
+  display: block;
 }
 
 /* sections */
