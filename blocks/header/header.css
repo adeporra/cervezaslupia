@@ -13,8 +13,9 @@ header nav {
   max-width: 1440px;
   margin: auto;
   height: var(--nav-height);
-  padding: 0 30px;
+  padding: 15px 30px;
   font-family: var(--body-font-family);
+  font-size: 15px;
 }
 
 header nav p {
@@ -190,8 +191,8 @@ header nav[aria-expanded='true'] .nav-sections ul > li > a:hover {
   }
 
   header nav .nav-sections ul > li > a {
-    font-size: var(--body-font-size-s);
-    font-weight: 700;
+    font-size: 15px;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
