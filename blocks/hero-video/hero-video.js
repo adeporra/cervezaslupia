@@ -7,20 +7,15 @@ export default function decorate(block) {
   if (videoLink) {
     const videoSrc = videoLink.href;
     const video = document.createElement('video');
-    video.setAttribute('autoplay', '');
-    video.setAttribute('muted', '');
-    video.setAttribute('loop', '');
-    video.setAttribute('playsinline', '');
+    video.src = videoSrc;
+    video.autoplay = true;
     video.muted = true;
+    video.loop = true;
+    video.playsInline = true;
+    video.setAttribute('muted', '');
+    video.setAttribute('playsinline', '');
 
-    const source = document.createElement('source');
-    source.src = videoSrc;
-    source.type = 'video/mp4';
-    video.append(source);
-
-    video.addEventListener('loadeddata', () => {
-      video.play().catch(() => {});
-    });
+    video.play().catch(() => {});
 
     firstRow.replaceWith(video);
   } else {
