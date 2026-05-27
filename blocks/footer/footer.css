@@ -112,14 +112,24 @@ footer .footer-brands {
 footer .footer-brands p {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px 30px;
   align-items: center;
   justify-content: center;
 }
 
+footer .footer-brands a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 80px;
+}
+
 footer .footer-brands img {
-  height: 40px;
+  max-height: 40px;
+  max-width: 70px;
   width: auto;
+  height: auto;
   opacity: 0.6;
   transition: opacity 0.2s ease;
 }
@@ -202,7 +212,12 @@ footer .footer-legal ul li a:any-link {
   footer .footer-brands p {
     flex-wrap: nowrap;
     justify-content: space-between;
-    gap: 20px;
+    gap: 10px;
+  }
+
+  footer .footer-brands a {
+    width: auto;
+    flex: 1;
   }
 
   /* Legal: row with text-left, links-right */
