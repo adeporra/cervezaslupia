@@ -61,6 +61,14 @@ export default async function decorate(block) {
   navWrapper.append(nav);
   block.append(navWrapper);
 
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navWrapper.classList.add('scrolled');
+    } else {
+      navWrapper.classList.remove('scrolled');
+    }
+  });
+
   isDesktop.addEventListener('change', () => {
     if (isDesktop.matches) {
       nav.setAttribute('aria-expanded', 'false');

@@ -1,8 +1,15 @@
+/* stylelint-disable no-descending-specificity */
 header .nav-wrapper {
   width: 100%;
   z-index: 10;
   position: fixed;
   top: 0;
+  background-color: transparent;
+  backdrop-filter: none;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+header .nav-wrapper.scrolled {
   background-color: rgb(255 255 255 / 85%);
   backdrop-filter: blur(10px);
 }
@@ -14,10 +21,16 @@ header nav {
   justify-content: space-between;
   max-width: 1440px;
   margin: auto;
-  height: 70px;
-  padding: 10px 30px;
+  height: var(--nav-height);
+  padding: 15px 30px;
   font-family: var(--body-font-family);
   font-size: 15px;
+  transition: height 0.3s ease, padding 0.3s ease;
+}
+
+header .nav-wrapper.scrolled nav {
+  height: 70px;
+  padding: 10px 30px;
 }
 
 header nav p {
@@ -37,6 +50,11 @@ header .nav-brand {
 
 header nav .nav-brand img {
   width: auto;
+  height: 80px;
+  transition: height 0.3s ease;
+}
+
+header .nav-wrapper.scrolled nav .nav-brand img {
   height: 47px;
 }
 
@@ -75,13 +93,13 @@ header nav[aria-expanded='true'] .nav-tools {
   display: block;
 }
 
-header nav .nav-tools a:any-link {
-  margin-right: 8px;
-}
-
 header nav .nav-tools img {
   width: 24px;
   height: 24px;
+}
+
+header nav .nav-tools a:any-link {
+  margin-right: 8px;
 }
 
 /* hamburger */
