@@ -1,32 +1,42 @@
 export default function decorate(block) {
-  // Row 1: video URL cell
-  const videoRow = block.querySelector(':scope > div:first-child');
-  const videoLink = videoRow?.querySelector('a');
+  const allLinks = [...block.querySelectorAll('a')];
+  const videoLink = allLinks.find((a) => a.href.match(/\.mp4/i));
 
-  if (videoLink && videoLink.href.endsWith('.mp4')) {
+  if (videoLink) {
+    const videoSrc = videoLink.href;
+    const videoContainer = videoLink.closest('div');
+
     const video = document.createElement('video');
-    video.src = videoLink.href;
     video.setAttribute('autoplay', '');
     video.setAttribute('muted', '');
     video.setAttribute('loop', '');
     video.setAttribute('playsinline', '');
     video.muted = true;
-    videoRow.replaceWith(video);
-  } else if (!block.querySelector(':scope > div:first-child picture')) {
-    block.classList.add('no-image');
+
+    const source = document.createElement('source');
+    source.src = videoSrc;
+    source.type = 'video/mp4';
+    video.append(source);
+
+    video.addEventListener('error', () => {
+      video.style.display = 'none';
+    });
+
+    video.addEventListener('loadeddata', () => {
+      video.play().catch(() => {});
+    });
+
+    if (videoContainer) {
+      videoContainer.replaceWith(video);
+    } else {
+      videoLink.replaceWith(video);
+    }
   }
 
-  // Row 2: content overlay - add button class to CTA link
-  const contentRow = block.querySelector(':scope > div:last-child');
-  if (contentRow) {
-    const ctaCell = contentRow.querySelector(':scope > div:last-child');
-    const ctaLink = ctaCell?.querySelector('a');
-    if (ctaLink) {
-      ctaLink.classList.add('button', 'primary');
-      const wrapper = ctaLink.closest('p');
-      if (wrapper) {
-        wrapper.classList.add('button-wrapper');
-      }
-    }
+  const ctaLink = block.querySelector('a[href]:not([href*=".mp4"])');
+  if (ctaLink && !ctaLink.classList.contains('button')) {
+    ctaLink.classList.add('button', 'primary');
+    const wrapper = ctaLink.closest('p');
+    if (wrapper) wrapper.classList.add('button-wrapper');
   }
 }
