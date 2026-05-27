@@ -125,9 +125,6 @@ main > div {
   margin: 0 16px;
 }
 
-main .section-metadata-wrapper {
-  display: none;
-}
 
 input,
 textarea,
