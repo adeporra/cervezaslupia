@@ -49,7 +49,7 @@ body {
   display: none;
   margin: 0;
   background-color: var(--background-color);
-  background-image: url('/content/images/bg-texture.webp');
+  background-image: url('/images/bg-texture.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
