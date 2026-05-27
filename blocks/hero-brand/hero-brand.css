@@ -10,8 +10,8 @@
 .hero-brand {
   position: relative;
   overflow: hidden;
-  padding: 130px 30px 40px;
-  max-width: 100%;
+  padding: 130px 60px 40px;
+  max-width: 1600px;
   margin: 0 auto;
   color: var(--text-color);
 }
@@ -137,7 +137,7 @@
 /* Desktop layout */
 @media (width >= 900px) {
   .hero-brand {
-    padding: 130px 30px 40px;
+    padding: 130px 80px 60px;
     min-height: 700px;
   }
 
@@ -158,6 +158,7 @@
   /* Cell 1: Tagline - takes left half */
   .hero-brand > div:nth-child(2) > div:first-child {
     flex: 1 1 0;
+    padding-left: 80px;
   }
 
   .hero-brand > div:nth-child(2) > div:first-child p {
@@ -165,36 +166,37 @@
     line-height: 63px;
   }
 
-  .hero-brand > div:nth-child(2) > div:first-child p del {
+  .hero-brand > div:nth-child(2) > div:first-child p del,
+  .hero-brand > div:nth-child(2) > div:first-child p s {
     line-height: 63px;
   }
 
-  /* Cell 2: Hop leaf - positioned absolute off to the left */
+  /* Cell 2: Hop leaf - bigger, with left margin */
   .hero-brand > div:nth-child(2) > div:nth-child(2) {
     position: absolute;
-    top: -80px;
-    left: -60px;
-    width: 139px;
+    top: -40px;
+    left: 20px;
+    width: 200px;
   }
 
-  /* Cell 3: Lupulitos decorative */
+  /* Cell 3: Lupulitos decorative - bigger */
   .hero-brand > div:nth-child(2) > div:nth-child(3) {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 180px;
-    max-width: 180px;
+    bottom: 20px;
+    left: 40px;
+    width: 220px;
+    max-width: 220px;
     z-index: 0;
     flex: none;
   }
 
-  /* Cell 4: Lobo decorative */
+  /* Cell 4: Lobo decorative - bigger */
   .hero-brand > div:nth-child(2) > div:nth-child(4) {
     position: absolute;
-    bottom: 60px;
-    left: 200px;
-    width: 180px;
-    max-width: 180px;
+    bottom: 80px;
+    left: 260px;
+    width: 220px;
+    max-width: 220px;
     z-index: 0;
     flex: none;
   }
