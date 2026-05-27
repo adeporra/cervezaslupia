@@ -31,7 +31,7 @@ footer .footer-content {
   padding: 60px 40px 30px;
 }
 
-/* Nav section: logo left, links in 2 columns below */
+/* Nav section: logo + links in 2 columns */
 footer .footer-nav {
   display: flex;
   flex-direction: column;
@@ -51,6 +51,7 @@ footer .footer-nav ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px 40px;
+  max-width: 400px;
 }
 
 footer .footer-nav ul li a:any-link {
@@ -60,7 +61,7 @@ footer .footer-nav ul li a:any-link {
   font-weight: 400;
 }
 
-/* Social section: "FOLLOW US" + icons row + Hijos de Rivera logo */
+/* Social section */
 footer .footer-social {
   display: flex;
   flex-direction: column;
@@ -74,24 +75,33 @@ footer .footer-social p:first-child {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
-footer .footer-social img {
+footer .footer-social p:nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+footer .footer-social p:nth-child(2) a:any-link {
+  margin-right: 0;
+}
+
+footer .footer-social p:nth-child(2) img {
   width: 32px;
   height: 32px;
 }
 
-footer .footer-social a:any-link {
-  margin-right: 16px;
-}
-
-/* Hijos de Rivera logo bigger */
+/* Hijos de Rivera logo */
 footer .footer-social p:last-child img {
   width: auto;
   height: 50px;
 }
 
-/* Brands section */
+/* Brands section - horizontal row */
 footer .footer-brands {
   margin-bottom: 30px;
   padding: 40px 0;
@@ -129,10 +139,6 @@ footer .footer-legal {
   gap: 12px;
 }
 
-footer .footer-legal p:first-child {
-  margin-bottom: 0;
-}
-
 footer .footer-legal ul {
   list-style: none;
   padding: 0;
@@ -151,37 +157,39 @@ footer .footer-legal ul li a:any-link {
 @media (width >= 900px) {
   footer .footer-content {
     padding: 60px 40px 30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    gap: 0;
   }
 
-  /* Nav: top-left */
+  /* Top area: nav-left + social-right */
   footer .footer-nav {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    gap: 24px 60px;
+    margin-bottom: 40px;
+  }
+
+  footer .footer-nav p {
     grid-column: 1;
     grid-row: 1;
-    margin-bottom: 40px;
   }
 
-  /* Social: top-right */
+  footer .footer-nav ul {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  /* Social: sits on same row as nav using negative margin to pull up */
   footer .footer-social {
-    grid-column: 2;
-    grid-row: 1;
-    align-items: flex-end;
-    text-align: right;
+    margin-top: -200px;
     margin-bottom: 40px;
+    align-items: flex-end;
   }
 
   footer .footer-social p:first-child {
-    display: flex;
-    align-items: center;
     justify-content: flex-end;
-    gap: 16px;
   }
 
   footer .footer-social p:nth-child(2) {
-    display: flex;
     justify-content: flex-end;
   }
 
@@ -190,19 +198,17 @@ footer .footer-legal ul li a:any-link {
     justify-content: flex-end;
   }
 
-  /* Brands: full width row below */
-  footer .footer-brands {
-    grid-column: 1 / -1;
-    grid-row: 2;
+  /* Brands: horizontal row */
+  footer .footer-brands p {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 20px;
   }
 
-  /* Legal: full width bottom */
+  /* Legal: row with text-left, links-right */
   footer .footer-legal {
-    grid-column: 1 / -1;
-    grid-row: 3;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    text-align: left;
   }
 }
