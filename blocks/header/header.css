@@ -128,10 +128,10 @@ header nav .nav-hamburger-icon::after {
   box-sizing: border-box;
   display: block;
   position: relative;
-  width: 24px;
-  height: 2px;
-  background: var(--text-color);
-  border-radius: 1px;
+  width: 26px;
+  height: 3px;
+  background: var(--link-color);
+  border-radius: 2px;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
