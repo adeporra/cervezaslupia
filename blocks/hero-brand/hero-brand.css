@@ -67,7 +67,8 @@
 }
 
 /* Black box with white text ("plant more hops.") */
-.hero-brand > div:nth-child(2) > div:first-child p del {
+.hero-brand > div:nth-child(2) > div:first-child p del,
+.hero-brand > div:nth-child(2) > div:first-child p s {
   display: inline-block;
   padding: 10px 15px;
   background-color: rgb(0 0 0);
