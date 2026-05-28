@@ -1,7 +1,6 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default function decorate(block) {
-  /* change to ul, li */
   const ul = document.createElement('ul');
   [...block.children].forEach((row) => {
     const li = document.createElement('li');
@@ -17,5 +16,27 @@ export default function decorate(block) {
     img.closest('picture').replaceWith(optimizedPic);
   });
   block.textContent = '';
-  block.append(ul);
+
+  const track = document.createElement('div');
+  track.className = 'cards-blog-track';
+  track.append(ul);
+
+  const prevBtn = document.createElement('button');
+  prevBtn.className = 'cards-blog-arrow cards-blog-arrow-left';
+  prevBtn.setAttribute('aria-label', 'Previous');
+  prevBtn.innerHTML = '&#8249;';
+
+  const nextBtn = document.createElement('button');
+  nextBtn.className = 'cards-blog-arrow cards-blog-arrow-right';
+  nextBtn.setAttribute('aria-label', 'Next');
+  nextBtn.innerHTML = '&#8250;';
+
+  prevBtn.addEventListener('click', () => {
+    track.scrollBy({ left: -300, behavior: 'smooth' });
+  });
+  nextBtn.addEventListener('click', () => {
+    track.scrollBy({ left: 300, behavior: 'smooth' });
+  });
+
+  block.append(prevBtn, track, nextBtn);
 }
