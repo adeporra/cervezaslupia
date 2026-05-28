@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://cervezaslupia.es/gl/",
+  "path": "gl",
+  "timestamp": "2026-05-28T09:07:28.534Z",
+  "title": "Cervexas Lupia - Cervexas con lúpulo de Galicia",
+  "template": "homepage",
+  "blocks": [
+    "hero-brand",
+    "carousel-ticker",
+    "embed-video",
+    "carousel-product",
+    "hero-video"
+  ]
+}

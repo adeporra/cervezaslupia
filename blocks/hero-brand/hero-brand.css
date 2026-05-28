@@ -153,20 +153,21 @@
     align-items: flex-start;
   }
 
-  /* Cell 1: Tagline - takes left half */
+  /* Cell 1: Tagline - takes left half, offset to avoid overlapping images */
   .hero-brand > div:nth-child(2) > div:first-child {
     flex: 1 1 0;
-    padding-left: 80px;
+    padding-left: 140px;
+    padding-top: 60px;
   }
 
   .hero-brand > div:nth-child(2) > div:first-child p {
-    font-size: 63px;
-    line-height: 63px;
+    font-size: 72px;
+    line-height: 72px;
   }
 
   .hero-brand > div:nth-child(2) > div:first-child p del,
   .hero-brand > div:nth-child(2) > div:first-child p s {
-    line-height: 63px;
+    line-height: 72px;
   }
 
   /* Cell 2: Hop leaf - reaches top-left */
