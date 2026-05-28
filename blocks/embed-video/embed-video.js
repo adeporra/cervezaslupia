@@ -99,7 +99,7 @@ export default function decorate(block) {
     const wrapper = document.createElement('div');
     wrapper.className = 'embed-video-placeholder';
     if (link) {
-      wrapper.innerHTML = '<div class="embed-video-placeholder-play"><button type="button" title="Play"></button></div>';
+      wrapper.style.cursor = 'pointer';
       wrapper.addEventListener('click', () => {
         loadEmbed(block, link, true);
       });
