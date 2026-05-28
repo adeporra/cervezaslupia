@@ -38,5 +38,9 @@ export default function decorate(block) {
     track.scrollBy({ left: 300, behavior: 'smooth' });
   });
 
-  block.append(prevBtn, track, nextBtn);
+  const arrows = document.createElement('div');
+  arrows.className = 'cards-blog-arrows';
+  arrows.append(prevBtn, nextBtn);
+
+  block.append(track, arrows);
 }
