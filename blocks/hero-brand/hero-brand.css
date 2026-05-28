@@ -45,13 +45,15 @@
   flex: 1 1 100%;
   position: relative;
   z-index: 2;
+  padding-left: 80px;
+  padding-top: 40px;
 }
 
 .hero-brand > div:nth-child(2) > div:first-child p {
   font-family: var(--heading-font-family);
-  font-size: 45px;
+  font-size: 50px;
   font-weight: 800;
-  line-height: 45px;
+  line-height: 50px;
   text-transform: uppercase;
   letter-spacing: -1px;
   color: var(--text-color);
