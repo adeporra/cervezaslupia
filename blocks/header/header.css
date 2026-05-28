@@ -32,6 +32,11 @@ header .nav-wrapper.scrolled nav {
   padding: 10px 30px;
 }
 
+header .nav-wrapper.scrolled nav[aria-expanded='true'] {
+  height: 100dvh;
+  padding: 100px 60px 40px;
+}
+
 header nav p {
   margin: 0;
   line-height: 1;
