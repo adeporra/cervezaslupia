@@ -2,7 +2,7 @@ export default function decorate(block) {
   const rows = [...block.querySelectorAll(':scope > div')];
   const firstRow = rows[0];
   const allLinks = firstRow ? [...firstRow.querySelectorAll('a')] : [];
-  const videoLink = allLinks.find((a) => a.href.match(/\.mp4/i));
+  const videoLink = allLinks.find((a) => a.href.match(/\.(mp4|webm|mov)/i));
 
   if (videoLink) {
     const videoSrc = videoLink.href;
@@ -12,10 +12,14 @@ export default function decorate(block) {
     video.muted = true;
     video.loop = true;
     video.playsInline = true;
+    video.setAttribute('autoplay', '');
     video.setAttribute('muted', '');
+    video.setAttribute('loop', '');
     video.setAttribute('playsinline', '');
 
-    video.play().catch(() => {});
+    video.addEventListener('canplay', () => {
+      video.play().catch(() => {});
+    });
 
     firstRow.replaceWith(video);
   } else {
